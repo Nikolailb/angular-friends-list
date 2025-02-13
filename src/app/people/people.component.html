@@ -1,0 +1,12 @@
+<div class="person">
+  <p>{{ name }}</p>
+  <button
+    *ngIf="name && isFavorite(name); else notFavorite"
+    (click)="rmFavorite()"
+  >
+    Remove Favorite
+  </button>
+  <ng-template #notFavorite>
+    <button (click)="selectFavorite()">Favorite</button>
+  </ng-template>
+</div>
