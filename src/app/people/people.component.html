@@ -1,7 +1,7 @@
 <div class="person">
   <p>{{ name }}</p>
   <button
-    *ngIf="name && isFavorite(name); else notFavorite"
+    *ngIf="isFavorite(this.asPerson()); else notFavorite"
     (click)="rmFavorite()"
   >
     Remove Favorite
